@@ -1,10 +1,12 @@
 {
-  "name": "new-admin",
+  "name": "new-react-admin",
   "version": "1.0.0",
   "description": "",
-  "main": "range.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "json-server --watch db.json --port 5000 --middlewares ./range.js",
+    "client": "npm start --prefix admin-demo",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
